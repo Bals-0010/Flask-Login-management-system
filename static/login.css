@@ -1,0 +1,120 @@
+.container 
+{
+    width: 450px;
+}
+
+.form-group
+{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 2px;
+}
+.submit_button
+{
+    border: none;
+    padding: 8px;
+    background-color: dodgerblue;
+    
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.submit_button:hover
+{
+    background-color: royalblue;
+}
+.submit_button:active
+{
+    transform: translateY(4px);
+}
+a
+{
+    color: limegreen;
+}
+a:hover
+{
+    color: green;
+}
+
+/*FONT AWESOME STYLING        */
+input[type="text"],
+input[type="password"]
+{
+/*  width: 100%;*/
+/*  border-radius: 4px;*/
+/*  margin: 8px 0;*/
+/*  outline: none;*/
+padding: 8px;
+box-sizing: border-box;
+transition: 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus 
+{
+border-color: dodgerBlue;
+box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon input[type="text"],
+.inputWithIcon input[type="password"]
+{
+padding-left: 48px;
+}
+
+.inputWithIcon 
+{
+position: relative;
+}
+
+.inputWithIcon i {
+position: absolute;
+left: 10px;
+top: 5px;
+padding: 9px 8px;
+color: #aaa;
+transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus + i ,
+.inputWithIcon input[type="password"]:focus + i
+{
+color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg i {
+background-color: #aaa;
+color: #fff;
+padding: 9px 4px;
+border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus + i 
+{
+color: #fff;
+background-color: dodgerBlue;
+}
+
+.inputWithIcon .eye i
+{
+top: 5px;
+left: 260px ;
+padding-right: 41px;
+}
+#eye_open_pwd,#eye_open_cpwd
+{
+display: none;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background: url(testbgpic2.jpeg); 
+    background-size: cover; 
+    font-family: sans-serif; 
+}

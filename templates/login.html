@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+    <p><br><br><br><br></p>
+    <div class="container">
+        <div class="card card-body">
+            <form id="login_form" autocomplete="off" action="" method="POST">
+                {{ form.hidden_tag() }}
+                <h2 style="text-align: center;">Login</h2><br><br>
+                <div class="form-group">
+                    {{ form.username.label }}
+                    {% if form.username.errors %}
+                    <div class="inputWithIcon">
+                        {{ form.username(class="form-control form control is-invalid") }}
+                        <!-- <input id="usrn" name="usrn" type="text" class="form-control" required>   -->
+                        <i class="fas fa-user"></i>
+                        <div class="invalid-feedback">
+                                {% for error in form.username.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                        </div>
+                    </div>
+                    
+                    {% else %}
+                    <div class="inputWithIcon">
+                        {{ form.username(class="form-control form-control") }}
+                        <i class="fas fa-user"></i>
+                    </div>
+                    {% endif %}
+
+                </div>
+                <div class="form-group">
+                    {{ form.password.label }}
+                    {% if form.password.errors %}
+                    <div class="inputWithIcon">
+                            {{ form.password(class="form-control form-control is-invalid") }}
+                            <!-- <input id="pwd" name="pwd" type="password" class="form-control pd-password-validation" required>     -->
+                            <i class="fas fa-key"></i>
+                        <div class="eye" onclick="password();">
+                            <i id="eye_open_pwd" class="far fa-eye"></i>
+                            <i id="eye_closed_pwd" class="far fa-eye-slash"></i>
+                        </div>
+                        <div class="invalid-feedback">
+                                {% for error in form.password.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="inputWithIcon">
+                        {{ form.password(class="form-control form-control") }}
+                        <i class="fas fa-key"></i>
+                        <div class="eye" onclick="password();">
+                            <i id="eye_open_pwd" class="far fa-eye"></i>
+                            <i id="eye_closed_pwd" class="far fa-eye-slash"></i>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div align="center">
+                    <!-- OLD 1 -->
+                        <!-- <button type="button" class="submit_button" id="submit_button">
+                            <i class="fas fa-paper-plane"></i>&nbsp;Login&nbsp;
+                        </button> -->
+                    <!-- OLD  2 -->
+                        <!-- <div class="inputWithIcon">
+                            {{ form.submit(class="submit_button") }}
+                            <i class="fas fa-paper-plane"></i>
+                        </div> -->
+                    {{ form.submit(class="btn btn-outline-info") }}
+                    <br><br>
+                </div>   
+            </form>
+        </div>
+    </div>
+{% endblock content %}
